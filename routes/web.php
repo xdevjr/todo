@@ -1,8 +1,7 @@
 <?php
 
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
-Route::get('/', function () {
-    return Inertia::render('Welcome');
-})->name('home');
+Route::get('/', [RegisterController::class, 'index'])->name('register.index');
+Route::post('register', [RegisterController::class, 'store'])->name('register.store');
