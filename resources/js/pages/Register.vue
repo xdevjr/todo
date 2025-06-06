@@ -31,6 +31,7 @@ const form = useForm({
 const save = () => {
     form.post(route('register.store'), {
         onSuccess() {
+            form.reset();
             alert('Cadastrado com sucesso!');
         }
     });
