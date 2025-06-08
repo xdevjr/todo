@@ -69,7 +69,11 @@ class TodoController extends Controller
      */
     public function update(Request $request, Todo $todo)
     {
-        //
+        $todo->update([
+            'status' => $request->input('status', $todo->status),
+        ]);
+
+        return back();
     }
 
     /**
@@ -77,6 +81,8 @@ class TodoController extends Controller
      */
     public function destroy(Todo $todo)
     {
-        //
+        $todo->delete();
+
+        return back();
     }
 }
