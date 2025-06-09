@@ -1,4 +1,5 @@
 <template>
+
     <Head title="Cadastro de Usuário" />
     <AppLayout>
         <h1 class="text-2xl font-bold">Cadastro de Usuário</h1>
@@ -14,7 +15,7 @@
                 <span class="text-red-500">{{ form.errors.email }}</span>
             </div>
 
-            <button type="submit" class="bg-blue-500 w-fit p-2 rounded text-white cursor-pointer">Cadastrar</button>
+            <button type="submit" class="bg-primary w-fit p-2 rounded text-white cursor-pointer">Cadastrar</button>
         </form>
     </AppLayout>
 </template>

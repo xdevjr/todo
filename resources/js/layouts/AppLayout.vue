@@ -1,5 +1,5 @@
 <template>
-    <header class="flex justify-between items-center bg-blue-500 h-25 px-5">
+    <header class="flex justify-between items-center bg-primary h-25 px-5">
         <h1 class="text-white text-2xl font-bold">Gerenciamento de Tarefas</h1>
         <nav class="flex gap-4 text-white">
             <Link :href="route('register.index')">Cadastro de Usuário</Link>

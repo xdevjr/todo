@@ -31,7 +31,7 @@
                 <span class="text-red-500">{{ form.errors.priority }}</span>
             </div>
 
-            <button type="submit" class="bg-blue-500 w-fit p-2 rounded text-white cursor-pointer">Salvar</button>
+            <button type="submit" class="bg-primary w-fit p-2 rounded text-white cursor-pointer">Salvar</button>
         </form>
     </AppLayout>
 </template>

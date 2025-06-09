@@ -26,9 +26,9 @@
                     </p>
                     <section class="flex gap-4 mt-2 w-70">
                         <Link :href="route('todos.edit', todo.id)"
-                            class="bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600 cursor-pointer w-fit"
+                            class="bg-primary text-white py-1 px-2 rounded hover:bg-blue-600 cursor-pointer w-fit"
                             label="Editar">Editar</Link>
-                        <button class="bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600 cursor-pointer w-fit"
+                        <button class="bg-primary text-white py-1 px-2 rounded hover:bg-blue-600 cursor-pointer w-fit"
                             @click="del(todo.id)">Excluir</button>
                     </section>
                     <section class="grid grid-cols-2 gap-2 mt-2 w-70">
@@ -38,7 +38,7 @@
                             <option>Pronto</option>
                         </select>
                         <button @click="updateStatus(todo.id)"
-                            class="bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600 cursor-pointer w-fit">Alterar
+                            class="bg-primary text-white py-1 px-2 rounded hover:bg-blue-600 cursor-pointer w-fit">Alterar
                             Status</button>
                     </section>
                 </article>
@@ -65,9 +65,9 @@
                     </p>
                     <section class="flex gap-4 mt-2 w-70">
                         <Link :href="route('todos.edit', todo.id)"
-                            class="bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600 cursor-pointer w-fit"
+                            class="bg-primary text-white py-1 px-2 rounded hover:bg-blue-600 cursor-pointer w-fit"
                             label="Editar">Editar</Link>
-                        <button class="bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600 cursor-pointer w-fit"
+                        <button class="bg-primary text-white py-1 px-2 rounded hover:bg-blue-600 cursor-pointer w-fit"
                             @click="del(todo.id)">Excluir</button>
                     </section>
                     <section class="grid grid-cols-2 gap-2 mt-2 w-70">
@@ -77,7 +77,7 @@
                             <option>Pronto</option>
                         </select>
                         <button @click="updateStatus(todo.id)"
-                            class="bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600 cursor-pointer w-fit">Alterar
+                            class="bg-primary text-white py-1 px-2 rounded hover:bg-blue-600 cursor-pointer w-fit">Alterar
                             Status</button>
                     </section>
                 </article>
@@ -104,9 +104,9 @@
                     </p>
                     <section class="flex gap-4 mt-2 w-70">
                         <Link :href="route('todos.edit', todo.id)"
-                            class="bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600 cursor-pointer w-fit"
+                            class="bg-primary text-white py-1 px-2 rounded hover:bg-blue-600 cursor-pointer w-fit"
                             label="Editar">Editar</Link>
-                        <button class="bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600 cursor-pointer w-fit"
+                        <button class="bg-primary text-white py-1 px-2 rounded hover:bg-blue-600 cursor-pointer w-fit"
                             @click="del(todo.id)">Excluir</button>
                     </section>
                     <section class="grid grid-cols-2 gap-2 mt-2 w-70">
@@ -116,7 +116,7 @@
                             <option selected>Pronto</option>
                         </select>
                         <button @click="updateStatus(todo.id)"
-                            class="bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600 cursor-pointer w-fit">Alterar
+                            class="bg-primary text-white py-1 px-2 rounded hover:bg-blue-600 cursor-pointer w-fit">Alterar
                             Status</button>
                     </section>
                 </article>
