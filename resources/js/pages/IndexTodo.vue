@@ -23,8 +23,9 @@
                         {{ todo.user.name }}
                     </p>
                     <section class="flex gap-4 mt-2 w-70">
-                        <button
-                            class="bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600 cursor-pointer w-fit">Editar</button>
+                        <Link :href="route('todos.edit', todo.id)"
+                            class="bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600 cursor-pointer w-fit"
+                            label="Editar">Editar</Link>
                         <button class="bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600 cursor-pointer w-fit"
                             @click="del(todo.id)">Excluir</button>
                     </section>
@@ -61,8 +62,9 @@
                         {{ todo.user.name }}
                     </p>
                     <section class="flex gap-4 mt-2 w-70">
-                        <button
-                            class="bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600 cursor-pointer w-fit">Editar</button>
+                        <Link :href="route('todos.edit', todo.id)"
+                            class="bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600 cursor-pointer w-fit"
+                            label="Editar">Editar</Link>
                         <button class="bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600 cursor-pointer w-fit"
                             @click="del(todo.id)">Excluir</button>
                     </section>
@@ -99,8 +101,9 @@
                         {{ todo.user.name }}
                     </p>
                     <section class="flex gap-4 mt-2 w-70">
-                        <button
-                            class="bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600 cursor-pointer w-fit">Editar</button>
+                        <Link :href="route('todos.edit', todo.id)"
+                            class="bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600 cursor-pointer w-fit"
+                            label="Editar">Editar</Link>
                         <button class="bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600 cursor-pointer w-fit"
                             @click="del(todo.id)">Excluir</button>
                     </section>
@@ -122,7 +125,7 @@
 
 <script setup lang='ts'>
 import AppLayout from '@/layouts/AppLayout.vue';
-import { Head, router, useForm } from '@inertiajs/vue3';
+import { Head, router, useForm, Link } from '@inertiajs/vue3';
 import { ref } from 'vue';
 
 const props = defineProps<
@@ -152,7 +155,7 @@ const changeStatus = (event: any) => {
 }
 
 const updateStatus = (id: number) => {
-    router.put(route('todos.update', id), {
+    router.put(route('todos.changeStatus', id), {
         status: status.value
     }, {
         onSuccess: () => {

@@ -61,13 +61,28 @@ class TodoController extends Controller
      */
     public function edit(Todo $todo)
     {
-        //
+        $users = User::all();
+        return inertia('EditTodo', compact('todo', 'users'));
     }
 
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, Todo $todo)
+    {
+        $dados = $request->validate([
+            'description' => 'required|string|max:255',
+            'setor' => 'required|string|max:255',
+            'priority' => 'required|string|in:ALTA,MEDIA,BAIXA',
+            'user_id' => 'required|exists:users,id',
+        ]);
+
+        $todo->update($dados);
+
+        return redirect()->route('todos.index');
+    }
+
+    public function changeStatus(Request $request, Todo $todo)
     {
         $todo->update([
             'status' => $request->input('status', $todo->status),
