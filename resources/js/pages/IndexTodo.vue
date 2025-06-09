@@ -1,4 +1,6 @@
 <template>
+
+    <Head title="Gerenciar Tarefas" />
     <AppLayout>
         <h1 class="text-2xl font-bold">Tarefas</h1>
         <main class="grid grid-cols-3 gap-4">

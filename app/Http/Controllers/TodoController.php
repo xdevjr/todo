@@ -14,7 +14,7 @@ class TodoController extends Controller
     public function index()
     {
         return inertia('IndexTodo', [
-            'todos' => Todo::with('user')->get(),
+            'todos' => Todo::with('user')->orderBy('id', 'desc')->get(),
             'users' => User::all(),
         ]);
     }
@@ -45,7 +45,7 @@ class TodoController extends Controller
 
         Todo::create($dados);
 
-        return back();
+        return redirect()->route('todos.index');
     }
 
     /**
